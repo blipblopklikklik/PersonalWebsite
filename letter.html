@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Apology</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #f7c5d4, #f8a5c2, #f39c12); /* Soft gradient for a warm look */
+            background-size: 300% 300%;
+            animation: gradient 10s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow-x: hidden;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .letter-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            width: 100%;
+            max-width: 700px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(50px);
+            opacity: 0;
+            transition: all 1s ease-out;
+            max-height: 80vh; /* Allow the letter container to grow up to 80% of the viewport height */
+            overflow-y: auto; /* Make the letter container scrollable */
+        }
+
+        .letter-container.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #f39c12;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            text-align: left;
+            margin-bottom: 20px; /* Space out paragraphs */
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #888;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .btn {
+            background-color: #f39c12; /* Matching with the gradient */
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Remove underline */
+        }
+
+        .btn:hover {
+            background-color: #f8a5c2; /* Lighter shade on hover */
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .letter-container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .btn {
+                font-size: 1rem;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="letter-container" id="letter">
+        <h1>I am sorry</h1>
+        <p>My Beautiful Sani,</p>
+        <p>
+            I want to start by saying that I have never been good enough to you, I know it is the same thing I have been saying for days now, but I can't just stop emphasising on that. Today morning I woke up thinking just one thing, that I have to be a different person, I want to be someone that fights for what they love, and I love you the most.
+        </p>
+        <p>
+            I just realized working for the company most of the time is affecting me and taking the time I should be spending with you, and that can't be worth any of the money that I make. I need to make a proper timetable for myself that I can follow so that I can better manage things, even this work, I believe can be managed.
+        </p>
+        <p>Our relationship is something that I value so much, in fact it is the only thing keeping me want to wake up everyday and want to achieve something. I have told you about how I wake up everyday , feeling anxious and everything and my first thought is to quit everything and just sleep, but you are the thought that makes me feel like I have to do this and make something out of myself. I still have someone to impress, I still have someone to keep happy through a lifetime</p>
+        <p>I promise that I will do things more often on my own rather than you dictating things for me, And all I am asking is for this last chance. I promise to better manage things, I know you have been too patient with me, all I need is this little time, and I promise to make it worth for you.</p>
+        <footer>- Akash</footer>
+
+        <!-- Button with link to question.html -->
+        <a href="question.html" class="btn">Click Here</a>
+    </div>
+
+    <script>
+        window.onload = () => {
+            const letterContainer = document.getElementById('letter');
+            letterContainer.classList.add('show');
+        };
+    </script>
+
+</body>
+</html>

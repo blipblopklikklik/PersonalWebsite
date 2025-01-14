@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memories Timeline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            color: #333;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 10px;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: #fcb69f;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            width: 45%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        .timeline-item:nth-child(even) {
+            left: 55%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background: #fcb69f;
+            border-radius: 50%;
+            top: 15px;
+            box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.9);
+        }
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+        .timeline-item h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        .timeline-item p {
+            margin: 5px 0 0;
+            font-size: 1rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Memories Timeline</h1>
+    </header>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <h3>Talking Stage</h3>
+            <p>26th April 2021</p>
+        </div>
+        <div class="timeline-item">
+            <h3>We Start Dating</h3>
+            <p>16th May 2021</p>
+        </div>
+        <div class="timeline-item">
+            <h3>First Meeting</h3>
+            <p>21st November 2021</p>
+        </div>
+        <div class="timeline-item">
+            <h3>First Kiss</h3>
+            <p>24th December 2021 (Proper One: 1st January 2022)</p>
+        </div>
+        <div class="timeline-item">
+            <h3>First Solo Date</h3>
+            <p>9th April 2022</p>
+        </div>
+        <div class="timeline-item">
+            <h3>First Time We Stayed Together</h3>
+            <p>30th July 2022</p>
+        </div>
+        <div class="timeline-item">
+            <h3>Stayed for More Than a Day</h3>
+            <p>4th October 2022</p>
+        </div>
+        <div class="timeline-item">
+            <h3>Risky Stuff in Oberon Mall</h3>
+            <p>21st January 2023</p>
+        </div>
+        <div class="timeline-item">
+            <h3>Classy Date</h3>
+            <p>12th October 2024</p>
+        </div>
+        <div class="timeline-item">
+            <h3>First time we did it</h3>
+            <p>28th December 2024</p>
+        </div>
+    </div>
+</body>
+</html>
